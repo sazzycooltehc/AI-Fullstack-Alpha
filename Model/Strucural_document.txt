@@ -1,0 +1,48 @@
+project_name/
+│
+├── data/                     # Contains datasets and data loading scripts
+│   ├── raw/                  # Raw, unprocessed data
+│   ├── processed/            # Preprocessed data
+│   ├── data_loading.py       # Scripts for loading and preprocessing data
+│   └── ...
+│
+├── models/                   # Contains model definitions
+│   ├── model_name.py         # Definition of a specific model
+│   ├── layers/               # Custom layers or blocks
+│   └── ...
+│
+├── losses/                   # Custom loss functions
+│   ├── loss_name.py
+│   └── ...
+│
+├── optimizers/               # Custom optimizers
+│   ├── optimizer_name.py
+│   └── ...
+│
+├── utils/                    # Utility functions and helper scripts
+│   ├── visualization.py      # Visualization tools
+│   ├── metrics.py            # Evaluation metrics
+│   ├── ...
+│
+├── config/                   # Configuration files (e.g., JSON, YAML)
+│   ├── train_config.json
+│   ├── model_config.json
+│   └── ...
+│
+├── notebooks/                # Jupyter notebooks for exploration and experimentation
+│   ├── EDA.ipynb             # Exploratory Data Analysis
+│   ├── ...
+│
+├── scripts/                  # Training, evaluation, and other scripts
+│   ├── train.py              # Script for training the model
+│   ├── evaluate.py           # Script for evaluating the model
+│   └── ...
+│
+├── tests/                    # Unit and integration tests
+│   ├── test_models.py
+│   ├── test_data_loading.py
+│   └── ...
+│
+├── README.md                 # Project description and instructions
+├── requirements.txt          # Project dependencies
+└── ...

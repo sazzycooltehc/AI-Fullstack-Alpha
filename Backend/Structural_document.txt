@@ -1,0 +1,37 @@
+project-root/
+├── .mvn/
+│   └── wrapper/
+│       ├── maven-wrapper.jar
+│       └── maven-wrapper.properties
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── yourcompany/
+│   │   │           └── yourproject/
+│   │   │               ├── config/
+│   │   │               ├── controller/
+│   │   │               ├── model/
+│   │   │               ├── repository/
+│   │   │               ├── service/
+│   │   │               └── YourProjectApplication.java
+│   │   └── resources/
+│   │       ├── application.properties or application.yml
+│   │       ├── static/
+│   │       │   ├── css/
+│   │       │   ├── js/
+│   │       │   └── images/
+│   │       └── templates/
+│   └── test/
+│       ├── java/
+│       │   └── com/
+│       │       └── yourcompany/
+│       │           └── yourproject/
+│       │               ├── controller/
+│       │               ├── repository/
+│       │               └── service/
+│       └── resources/
+└── target/

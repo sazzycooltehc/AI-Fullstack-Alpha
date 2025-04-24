@@ -1,0 +1,32 @@
+src/
+  app/
+    core/          
+      services/
+      guards/
+      interceptors/
+    shared/        
+      components/
+      directives/
+      pipes/
+      models/
+    modules/       
+      feature-a/
+        components/
+        services/
+        feature-a.module.ts
+      feature-b/
+        components/
+        services/
+        feature-b.module.ts
+    app.component.ts
+    app.config.ts
+    app.routes.ts
+  assets/
+  environments/
+    environment.development.ts
+    environment.ts
+  styles/
+    styles.scss
+  index.html
+  main.ts
+  
