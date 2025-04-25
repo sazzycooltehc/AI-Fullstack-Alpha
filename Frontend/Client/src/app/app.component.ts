@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-root',
