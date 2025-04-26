@@ -1,4 +1,4 @@
-package utils;
+package com.backend.server.utils;
 
 public class customError {
     private String errorMessage;
