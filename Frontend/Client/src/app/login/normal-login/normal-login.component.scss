@@ -1,11 +1,29 @@
-.button-section {
-    button {
-        background-color: #ed1c24;
-        color: #ffffff;
-        border-radius: 5px;
+.login-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+
+    .button-section {
+        button {
+            background-color: #ed1c24;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+        .second-button {
+            margin-left: 10px;
+            background-color: #233253;
+        }
     }
-    .second-button {
-        margin-left: 10px;
-        background-color: #233253;
-    }
+
 }
