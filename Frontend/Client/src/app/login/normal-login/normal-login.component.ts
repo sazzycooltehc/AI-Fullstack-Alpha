@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { LoginService } from '../../core/services/login/login.service';
 import { catchError, Observable, throwError } from 'rxjs';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, provideHttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment.development';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -20,6 +20,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 
 export class NormalLoginComponent {
   loginForm: FormGroup | any;
+  loginError: string = '';
   constructor(private router: Router, private loginAPI: LoginService, private fb: FormBuilder) { 
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -32,16 +33,30 @@ export class NormalLoginComponent {
   private http: HttpClient = inject(HttpClient);
   private baseUrl = environment.apiUrl; // Use the environment variable for the base URL
 
+
 login() {
   // Implement login logic here
   this.router.navigate(['/home']);
   console.info('Login button clicked!');
-  return this.http.get<any>(`${this.baseUrl}/login`).pipe(
-    catchError((error) => {
-      console.error('Error fetching data:', error.message || error);
-      return throwError(() => new Error('Failed to fetch data. Please try again later.'));
-    })
-  );
+  const headers = new HttpHeaders({
+    'Content-Type': 'application/x-www-form-urlencoded',
+  });
+
+  
+  const body = new URLSearchParams();
+  body.set('userid', this.loginForm.value.email);
+  body.set('password', this.loginForm.value.password);
+  this.http.post('http://localhost:8080/api/login', body.toString(), { headers, responseType: 'json' })
+  .subscribe({
+    next: (response: any) => {
+      localStorage.setItem('authToken', response.token); // Save token
+      localStorage.setItem('tokenTimestamp', Date.now().toString()); // Save timestamp
+     // this.router.navigate(['newsfeed']); // Navigate after login success
+    },
+    error: (err) => {
+      this.loginError = 'Incorrect password or username'; // Set error message
+    }
+  });
 }
 forgot() {
   // Implement forgot password logic here
