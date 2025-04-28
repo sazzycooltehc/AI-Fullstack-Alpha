@@ -8,3 +8,14 @@ CREATE TABLE "login" (
   PRIMARY KEY ("id","email"),
   UNIQUE ("token")
 ); 
+
+SELECT * from "login";
+
+ALTER TABLE "login"
+RENAME COLUMN "email" to "userid";
+
+INSERT INTO "login" (id, userid, password, token)
+VALUES ('1', 'jack@gmail.com', 'usa12345', 'jack@gmail.com');
+
+
+

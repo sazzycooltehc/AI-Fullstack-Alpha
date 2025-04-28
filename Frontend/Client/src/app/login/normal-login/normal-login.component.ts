@@ -36,7 +36,6 @@ export class NormalLoginComponent {
 
 login() {
   // Implement login logic here
-  this.router.navigate(['/home']);
   console.info('Login button clicked!');
   const headers = new HttpHeaders({
     'Content-Type': 'application/x-www-form-urlencoded',
@@ -46,11 +45,12 @@ login() {
   const body = new URLSearchParams();
   body.set('userid', this.loginForm.value.email);
   body.set('password', this.loginForm.value.password);
-  this.http.post('http://localhost:8080/api/login', body.toString(), { headers, responseType: 'json' })
+  this.http.post(environment.loginUrl, body.toString(), { headers, responseType: 'json' })
   .subscribe({
     next: (response: any) => {
       localStorage.setItem('authToken', response.token); // Save token
       localStorage.setItem('tokenTimestamp', Date.now().toString()); // Save timestamp
+      this.router.navigate(['/home']);
      // this.router.navigate(['newsfeed']); // Navigate after login success
     },
     error: (err) => {
