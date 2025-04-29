@@ -6,9 +6,10 @@
 }
 .login-box {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
+    max-height: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -28,7 +29,35 @@
 
 }
 .misc-box {
-    width:65%
+    width:65%;
+    background-color: #afd1ea;
+    .useful-links {
+        position: relative;
+        top: 2%;
+        left: 1%;
+    }
+    a {
+        text-decoration: none;
+        color: transparent;
+        .hover-effect {
+            background: url("../../../assets/Logos/LinkedIn/InBug-White.png") no-repeat center;
+            width: 700px;
+            height: 700px;
+            transform: scale(0.05);
+            position: relative;
+            right: 31%;
+            bottom: 42%;
+        }
+        .isHovered {
+            background:  url("../../../assets/Logos/LinkedIn/LI-In-Bug.png") no-repeat center;
+            width: 700px;
+            height: 700px;
+            transform: scale(0.05);
+            position: relative;
+            right: 31%;
+            bottom: 42%;
+        }
+    }
 }
 .row-flex {
     flex-direction: row;

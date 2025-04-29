@@ -48,8 +48,17 @@
   </mat-card>
 
   <mat-card class="misc-box">
-    <div>
-      Hi
+    <div >
+      
+      <span class="useful-links">Reach Me At</span>
+
+      <a href="https://www.linkedin.com/in/saravindsubbu/" target="_blank">
+        <div [class]="hover ? 'hover-effect': 'isHovered'" (mouseenter)="logoChange()" (mouseleave)="logoChange()">
+          Hi
+        </div>
+      </a>
+      
+      
     </div>
   </mat-card>
 
