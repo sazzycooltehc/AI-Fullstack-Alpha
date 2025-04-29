@@ -1,10 +1,11 @@
-<mat-card class="login-card">
-  <mat-card-header>
-    <mat-card-title class="login-title">Login</mat-card-title>
-    <mat-card-subtitle>Login to your account</mat-card-subtitle>
-  </mat-card-header>
+<mat-card class="login-card row-flex">
 
   <mat-card class="login-box">
+
+    <mat-card-header>
+      <mat-card-title class="login-title">Login</mat-card-title>
+      <mat-card-subtitle>Login to your account</mat-card-subtitle>
+    </mat-card-header>
 
     <div class="login-form" [formGroup]="loginForm">
       <mat-form-field appearance="fill" class="form-field">
@@ -40,10 +41,16 @@
 
     <div class="button-section flex">
       <button class="main-button" mat-button [disabled]="loginForm.invalid" (click)="login()">Login</button>
-      <button class="second-button" mat-button (click)="forgot()">Register</button>
+      <button class="second-button" mat-button (click)="register()">Register</button>
     </div>
 
 
+  </mat-card>
+
+  <mat-card class="misc-box">
+    <div>
+      Hi
+    </div>
   </mat-card>
 
 </mat-card>

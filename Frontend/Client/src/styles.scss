@@ -2,3 +2,9 @@
 .flex {
   display: flex;
 }
+.mat-mdc-button[disabled] {
+   opacity: 0.5;
+}
+.mat-mdc-form-field-error{
+  color: #ed1c24 !important;
+}

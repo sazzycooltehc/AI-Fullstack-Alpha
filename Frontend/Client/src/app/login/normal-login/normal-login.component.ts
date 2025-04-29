@@ -58,9 +58,9 @@ login() {
     }
   });
 }
-forgot() {
-  // Implement forgot password logic here
-  console.log('Forgot password button clicked!');
+register() {
+  this.router.navigate(['/register']);
+  console.info('Register button clicked!');
 }
 
 }
