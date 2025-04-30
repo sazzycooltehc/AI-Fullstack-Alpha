@@ -52,13 +52,18 @@
       
       <span class="useful-links">Reach Me At</span>
 
-      <a href="https://www.linkedin.com/in/saravindsubbu/" target="_blank">
-        <div [class]="hover ? 'hover-effect': 'isHovered'" (mouseenter)="logoChange()" (mouseleave)="logoChange()">
+      <a class="linkedin" href="https://www.linkedin.com/in/saravindsubbu/" target="_blank">
+        <div [class]="hover ? 'hover-effect': 'isHovered'" (mouseenter)="logoChange('ld')" (mouseleave)="logoChange('ld')">
           Hi
         </div>
       </a>
       
-      
+      <a class="youtube" href="https://https://www.youtube.com/@sas_est_1999" target="_blank">
+        <div [class]="hover ? 'ythover-effect': 'isytHovered'" (mouseenter)="logoChange('yt')" (mouseleave)="logoChange('yt')">
+          Hi
+        </div>
+      </a>
+
     </div>
   </mat-card>
 

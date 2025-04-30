@@ -31,6 +31,7 @@ export class NormalLoginComponent {
 
   loginvalue: any;
   hover: boolean = false;
+  ythover: boolean = false;
   private http: HttpClient = inject(HttpClient);
   private baseUrl = environment.apiUrl; // Use the environment variable for the base URL
 
@@ -64,8 +65,13 @@ export class NormalLoginComponent {
     console.info('Register button clicked!');
   }
 
-  logoChange() {
-    this.hover = !this.hover;
+  logoChange(flag: any) {
+    if (flag == 'ld') {
+      this.hover = !this.hover;
+    }
+    if (flag == 'yt') {
+      this.ythover = !this.ythover;      
+    }
     console.log('hwllo');
   }
 }

@@ -39,7 +39,9 @@
     a {
         text-decoration: none;
         color: transparent;
-        .hover-effect {
+
+        .hover-effect
+        {
             background: url("../../../assets/Logos/LinkedIn/InBug-White.png") no-repeat center;
             width: 700px;
             height: 700px;
@@ -48,7 +50,9 @@
             right: 31%;
             bottom: 42%;
         }
-        .isHovered {
+    
+        .isHovered
+        {
             background:  url("../../../assets/Logos/LinkedIn/LI-In-Bug.png") no-repeat center;
             width: 700px;
             height: 700px;
@@ -57,6 +61,24 @@
             right: 31%;
             bottom: 42%;
         }
+
+        .ythover-effect {
+            background: url("../../../assets/Logos/Youtube/yt_logo_rgb_dark.png") no-repeat center;
+            width: 275px;
+            height: 275px;
+            transform: scale(0.15);
+            position: relative;
+        }
+
+        .isytHovered
+        {
+            background:  url("../../../assets/Logos/Youtube/yt_logo_mono_dark.png") no-repeat center;
+            width: 275px;
+            height: 275px;
+            transform: scale(0.15);
+            position: relative;
+        }
+
     }
 }
 .row-flex {
