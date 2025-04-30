@@ -51,19 +51,19 @@
     <div >
       
       <span class="useful-links">Reach Me At</span>
-
+     <div class="social-details flex">
       <a class="linkedin" href="https://www.linkedin.com/in/saravindsubbu/" target="_blank">
-        <div [class]="hover ? 'hover-effect': 'isHovered'" (mouseenter)="logoChange('ld')" (mouseleave)="logoChange('ld')">
+        <div [class]="hover ? 'hover-effect image-container': 'isHovered image-container'" (mouseenter)="logoChange('ld')" (mouseleave)="logoChange('ld')">
           Hi
         </div>
       </a>
       
       <a class="youtube" href="https://https://www.youtube.com/@sas_est_1999" target="_blank">
-        <div [class]="hover ? 'ythover-effect': 'isytHovered'" (mouseenter)="logoChange('yt')" (mouseleave)="logoChange('yt')">
+        <div [class]="ythover ? 'ythover-effect image-container': 'isytHovered image-container'" (mouseenter)="logoChange('yt')" (mouseleave)="logoChange('yt')">
           Hi
         </div>
       </a>
-
+      </div>
     </div>
   </mat-card>
 

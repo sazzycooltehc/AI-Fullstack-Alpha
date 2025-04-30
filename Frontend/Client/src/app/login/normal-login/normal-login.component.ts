@@ -69,7 +69,7 @@ export class NormalLoginComponent {
     if (flag == 'ld') {
       this.hover = !this.hover;
     }
-    if (flag == 'yt') {
+    else if (flag == 'yt') {
       this.ythover = !this.ythover;      
     }
     console.log('hwllo');
