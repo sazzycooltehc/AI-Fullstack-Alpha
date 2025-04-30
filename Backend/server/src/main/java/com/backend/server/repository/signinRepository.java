@@ -1,4 +1,7 @@
 package com.backend.server.repository;
 
-public interface signinRepository {
+import com.backend.server.model.userRegistrationModel;
+import org.springframework.data.repository.CrudRepository;
+
+public interface signinRepository extends CrudRepository<userRegistrationModel, String> {
 }
