@@ -70,7 +70,7 @@ maildir
 *.json
 *.zip
 *.npy
-
+/.idea/
 
 #virtualenv
 
