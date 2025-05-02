@@ -17,5 +17,17 @@ RENAME COLUMN "email" to "userid";
 INSERT INTO "login" (id, userid, password, token)
 VALUES ('1', 'jack@gmail.com', 'usa12345', 'jack@gmail.com');
 
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  password TEXT NOT NULL,
+  mobile_number VARCHAR(20) NOT NULL,
+  token VARCHAR(16) NOT NULL PRIMARY KEY,
+  CONSTRAINT unique_email UNIQUE (email),
+  CONSTRAINT users_token_fkey FOREIGN KEY (token) REFERENCES login(token)
+);
 
 
+SELECT * FROM users;
